@@ -4,8 +4,8 @@ import * as imdb from "imdb-api";
 type MyProps = {};
 
 type MyState = {
-  movie: imdb.Movie | undefined,
-  error: string,
+  movie: imdb.Movie | undefined;
+  error: string;
 };
 
 class MoviesList extends Component<MyProps, MyState> {
@@ -25,7 +25,11 @@ class MoviesList extends Component<MyProps, MyState> {
 
   render() {
     return (
-      
+      <div className="top">
+        <h1>Movie</h1>
+        <div className="content">{this.state.movie?.title}</div>
+        <div className="error">{this.state.error}</div>
+      </div>
     );
   }
 }
