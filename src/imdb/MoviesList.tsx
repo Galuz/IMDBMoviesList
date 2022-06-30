@@ -15,7 +15,7 @@ class MoviesList extends Component<MyProps, MyState> {
     try {
       const results = await imdb.get(
         { name: "Toxic Avenger" },
-        { apiKey: "use your api key here", baseURL: "http://localhost:3000" }
+        { apiKey: "d7047f13-9701-41b6-80e4-3e0fa56d6a05", baseURL: "http://localhost:3000" }
       );
       this.setState({ movie: results, error: "" });
     } catch (e) {
